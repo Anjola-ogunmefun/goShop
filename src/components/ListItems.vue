@@ -2,14 +2,9 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <div class="card h-100 border-light" style="width:25rem">
-            <img
-              :src="url"
-              class="card-img-top"
-              style="padding:2rem; height:400px"
-              alt="product image"
-            />
+        <div class="col-sm-4">
+          <div class="card h-100 border-light product ">
+            <img :src="url" class="card-img-top image" alt="product image" />
             <div class="card-body">
               <h2 class="card-title">
                 <strong>{{ name }}</strong>
@@ -79,12 +74,6 @@ export default {
       enable: false,
     };
   },
-
-  computed: {
-    isActive() {
-      return this.itemQuantity === 0 ? true : false;
-    },
-  },
   methods: {
     addQuantity() {
       this.itemQuantity++;
@@ -115,7 +104,7 @@ div span {
   display: inline-flex;
   font-size: 20px;
   width: 30px;
-  padding: 0 0.6rem;
+  padding: 0 0.7rem;
   margin: 0 3.5rem;
 }
 
@@ -126,9 +115,6 @@ section {
   text-align: center;
   width: 90%;
   max-width: 40rem;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem; */
 }
 
 button {
@@ -149,5 +135,19 @@ span {
 .quantity {
   font-size: 16px;
   margin-top: 20px;
+}
+.product {
+  width: 25rem;
+}
+.image {
+  padding: 2rem;
+  height: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+  .image {
+    padding: 3rem;
+    height: 350px;
+  }
 }
 </style>

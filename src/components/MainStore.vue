@@ -76,6 +76,10 @@ body {
 a {
   cursor: pointer;
   font-size: 2rem;
-  margin: 0 1rem;
+}
+@media only screen and (max-width: 600px) {
+ a{
+   margin-right: -80px;
+ }
 }
 </style>
