@@ -20,15 +20,10 @@
   margin-bottom: 3.125rem;
   box-shadow: inset 0 0 0 2000px rgba(15, 1, 9, 0.2);
 }
-img {
-  width: 100vw;
-  height: 100h;
-}
 
 #header h1 {
-  margin-top: 40rem;
+  margin-top: 30rem;
   margin-bottom: auto;
-  /* margin-left: 600px; */
   font-weight: 400;
   color: white;
   font-family: monospace;
@@ -36,5 +31,25 @@ img {
 }
 span{
   color: yellow;
+}
+
+@media only screen and (max-width: 600px) {
+  #header{
+    height: 30vh;
+  }
+  #header h1{
+    margin-top: 10rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   #header{
+    height: 50vh;
+  }
+  #header h1{
+    margin-top: 20rem;
+  }
+
 }
 </style>
